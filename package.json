@@ -1,0 +1,36 @@
+{
+  "name": "heroku-cli-stormpath",
+  "version": "0.0.1",
+  "description": "`heroku stormpath:*` commands",
+  "main": "index.js",
+  "author": "Randall Degges @rdegges",
+  "homepage": "https://github.com/stormpath/heroku-cli-stormpath",
+  "repository": "https://github.com/stormpath/heroku-cli-stormpath",
+  "bugs": {
+    "url": "https://github.com/stormpath/heroku-cli-stormpath/issues"
+  },
+  "keywords": [
+    "heroku-plugin",
+    "stormpath"
+  ],
+  "license": "Unlicense",
+  "dependencies": {
+    "co": "4.6.0",
+    "heroku-cli-util": "5.7.3",
+    "lodash": "3.10.1",
+    "opn": "3.0.3",
+    "printf": "0.2.3"
+  },
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "jshint": "^2.8.0",
+    "mocha": "^2.2.5",
+    "nock": "5.2.1",
+    "proxyquire": "1.7.3"
+  },
+  "scripts": {
+    "test": "jshint lib commands && mocha && jshint test",
+    "preversion": "npm test",
+    "postversion": "git push && git push --tags"
+  }
+}
